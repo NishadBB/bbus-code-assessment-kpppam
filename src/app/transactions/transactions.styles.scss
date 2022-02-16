@@ -1,0 +1,19 @@
+// Replace me with your styles
+.codebox {
+  background: rgba(grey, 0.1);
+  color: grey;
+  padding: 5px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.icon:before {
+  content: url(https://via.placeholder.com/150);
+}
