@@ -1,10 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'bb-button',
   template: `
-      <button class="mt-3" (click)="sortOrder()">sort</button>
+      <button class="mt-3" (click)="sort()">sort</button>
   `,
-  styleUrls: ['./transactions.styles.scss'],
 })
-export class ButtonComponent {}
+export class ButtonComponent {
+  @Output() sortList: EventEmitter<boolean> = new EventEmitter();
+
+  sort() {
+    this.sortList.emit(true);
+  }
+}
